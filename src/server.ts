@@ -9,7 +9,10 @@ app.use(express.json());
 
 // Root Route
 app.get('/', (req, res) => {
-  res.send('Student API is running. Try /students');
+  res.json({
+    message: 'Student Information API',
+    course: 'ITE 303'
+  });
 });
  
 // Send student requests to the student router
